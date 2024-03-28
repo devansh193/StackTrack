@@ -26,3 +26,12 @@ model User{
   createdAt   DateTime @default(now())
   updateAt    DateTime @default(now())
 }
+model TeacherDetail {
+  id String @unique
+  email String @unique
+  name String
+  department String
+  mobileNo Int
+  addedAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}

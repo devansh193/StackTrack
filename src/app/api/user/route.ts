@@ -8,13 +8,13 @@ const userSchema = z.object({
     email: z.string().min(1, 'Email is required'),
     department: z.string().min(2, "Department is required"),
     password: z.string().min(1, "Password is required").min(8, "Password must contain 8 characters"),
-    role: z.string().min(1, "Role is required.")
+    role: z.string().min(1).optional().default("Student")
 });
 
 export async function POST(req:NextRequest) {
     try{
         const body = await req.json();
-        const {email, username, department, role, password} =  body;
+        const {email, username, department, role, password} = userSchema.parse (body);
         
         const existingUser = await db.user.findUnique({
             where: {email: email}
@@ -34,6 +34,6 @@ export async function POST(req:NextRequest) {
         })    
         return NextResponse.json({user: newUser, message:"User created successfully."}, {status: 201});
     } catch(error){
-
+        return NextResponse.json(error);
     }
 }

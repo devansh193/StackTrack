@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { UserButton } from "@clerk/nextjs";
 
 const  Landing= ()=> {
   return (
@@ -24,7 +25,7 @@ const  Landing= ()=> {
             size={"lg"}
             asChild
           >
-            <Link href="/signup">
+            <Link href="/sign-up">
               <p className="text-white">Get Started</p>
             </Link>
           </Button>
