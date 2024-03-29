@@ -1,10 +1,7 @@
-
-
 const organizationIdPage = () =>{
     return (
-        <div className="mt-20">
-
-            Orhanizatoin page
+        <div>
+            Organization page
         </div>
     );
 };
