@@ -15,23 +15,7 @@ datasource db {
   directUrl = env("DATABASE_URL_UNPOOLED")
 }
 
-
-model User{
-  id          String @unique @default(cuid())
-  email       String @unique
-  username    String
-  department  String
-  role        String? 
-  password    String
-  createdAt   DateTime @default(now())
-  updateAt    DateTime @default(now())
-}
-model TeacherDetail {
-  id String @unique
-  email String @unique
-  name String
-  department String
-  mobileNo Int
-  addedAt DateTime @default(now())
-  updatedAt DateTime @default(now())
+model Board{
+  id String @id @default(uuid())
+  title String
 }
