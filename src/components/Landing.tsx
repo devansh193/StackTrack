@@ -8,7 +8,7 @@ const  Landing= ()=> {
     <main className="flex items-center justify-center flex-col bg-zinc-50  h-full">
     <div className="py-40 mx-auto text-center flex flex-col items-center max-w-3xl m-15">
       <div className="mb-4 text-sm md:text-md font-sans font-semibold flex items-center border shadow-md py-2.5 px-4 md:px-5 bg-zinc-50 text-zinc-700 rounded-full uppercase">
-        The Final Project
+        Work, rest, work
       </div>
       <h1 className="text-zinc-800 font-bold text-6xl tracking-tight sm:text-6xl">
         StackTrack.
